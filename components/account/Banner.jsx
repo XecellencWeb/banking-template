@@ -258,7 +258,7 @@ const Banner = () => {
    const sShot =  await getDocs(collection(db,'users'))
 
    sShot.forEach(s=>{
-    if(s.data().email === auth.currentUser.email){
+    if(s.data()?.email === auth?.currentUser?.email){
       setUser(s.data())
     }
    })
